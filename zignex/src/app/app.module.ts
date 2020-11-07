@@ -15,13 +15,15 @@ import { AppComponent } from './app.component';
 import { LeftPanelComponent } from './left-panel/left-panel.component';
 import { TreeViewComponent } from './tree-view/tree-view.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MapViewComponent } from './map-view/map-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LeftPanelComponent,
     TreeViewComponent,
-    NavbarComponent
+    NavbarComponent,
+    MapViewComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatCheckboxModule,
     MatProgressSpinnerModule,
     RouterModule.forRoot([
-      {path: '', component: LeftPanelComponent}
+      {path: '', component: MapViewComponent}
     ])
   ],
   providers: [],

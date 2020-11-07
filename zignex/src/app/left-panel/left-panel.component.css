@@ -3,15 +3,12 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 500px;
   }
 
   mat-sidenav {
     width: 400px;
-  }
+  }  
 
-  mat-sidenav-content{
-    height: 100%;
-  }
   
+
   
