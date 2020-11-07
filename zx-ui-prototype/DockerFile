@@ -1,0 +1,8 @@
+FROM node:12.16.1-alpine As builder
+COPY ./ ./slickgrid
+WORKDIR /slickgrid
+RUN npm i
+RUN $(npm bin)/ng build --prod
+
+FROM nginx:1.15.8-alpine
+COPY --from=builder ./slickgrid/dist/slickgrid/ /usr/share/nginx/html

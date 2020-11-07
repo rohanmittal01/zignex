@@ -1,0 +1,19 @@
+.navbar {  
+    height: 40px;
+}
+
+.navbar-nav li {
+    padding-right : 2rem;
+}
+
+.active a {
+    border-bottom: 2px solid white;
+}
+
+
+a{
+    color: white;
+}
+
+
+ 

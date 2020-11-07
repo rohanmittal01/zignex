@@ -1,0 +1,37 @@
+
+<div style="background-color: lightgray; padding: 20px;">
+  <form>
+    <button><img src="../../assets/3lines.JPG" style="border: none;"></button>
+    <input placeholder="Search here">
+    <button><img src="../../assets/searchbar_icon.png" style="border: none;"></button>
+  </form>
+  <div style="margin-top: 10px;">
+    <button style="background-color: white; width: 15px; padding: 0px; text-align: center;">></button>
+     Daily
+    <button><img src="../../assets/Refresh.JPG" style="border: none;"></button>
+  </div>
+</div>
+<mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+    <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+      <button mat-icon-button disabled></button>
+      <img src="https://static.thenounproject.com/png/1020693-200.png" style="height: 20px;">
+      {{node.item}}
+    </mat-tree-node>
+    <mat-tree-node style="white-space: nowrap;" *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding matTreeNodePaddingIndent="20">
+      <button mat-icon-button
+              [attr.aria-label]="'Toggle ' + node.item" matTreeNodeToggle>
+              <mat-icon>
+          {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+        </mat-icon>
+      </button>
+      <img src="https://static.thenounproject.com/png/1020693-200.png" style="height: 20px;">
+      {{node.item}}
+      <!-- <mat-progress-spinner *ngIf="node.isLoading"
+                        mode="indeterminate"
+                        class="example-tree-progress-bar"></mat-progress-spinner> -->
+    </mat-tree-node>
+  </mat-tree>
+  <button class='hideAll'>
+    ^ Hide All
+  </button>
+  
