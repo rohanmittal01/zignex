@@ -26,12 +26,8 @@
       </button>
       <img src="https://static.thenounproject.com/png/1020693-200.png" style="height: 20px;">
       {{node.item}}
-      <!-- <mat-progress-spinner *ngIf="node.isLoading"
-                        mode="indeterminate"
-                        class="example-tree-progress-bar"></mat-progress-spinner> -->
+      <mat-progress-spinner *ngIf="node.isLoading" mode="determinate" class="example-tree-progress-bar"></mat-progress-spinner>
     </mat-tree-node>
   </mat-tree>
-  <button class='hideAll'>
-    ^ Hide All
-  </button>
+
   

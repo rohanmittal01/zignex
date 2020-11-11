@@ -29,14 +29,6 @@ input:focus, button:focus{
   outline: none;
 }
 
-.hideAll{
-  position: fixed;
-  bottom: 50px;
-  border: 0.5px solid black;
-  border-radius: 5px;
-  width: 90px;
-  text-align: center;
-}
 
 mat-tree{
   background-color: white;

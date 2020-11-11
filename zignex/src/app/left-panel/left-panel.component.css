@@ -7,8 +7,36 @@
 
   mat-sidenav {
     width: 400px;
+    position: fixed;
   }  
 
-  
+  .toggle{
+    position: fixed;
+    top: 100px;
+    cursor: pointer;
+  }
 
+  .hideAll{
+    /* position: fixed;
+    bottom: 50px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    width: 90px;
+    text-align: center; */
   
+    position: fixed;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    /* border: 0.5px solid black; */
+    /* border-radius: 5px; */
+    align-items: center;
+    height: 200px;
+    width: 400px;
+  }
+  
+  .hideAllButton{
+    border: 0.5px solid black;
+    border-radius: 5px;
+    padding: 5px;
+  }

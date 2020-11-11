@@ -1,11 +1,18 @@
-
-<mat-sidenav-container class="example-container">
+<mat-sidenav-container class="example-container" >
         <mat-sidenav #sidenav mode="over" [(opened)]="opened" hasBackDrop='true'>
                      <app-tree-view></app-tree-view>
-                     <!-- <p><button (click)="toggleSideNav()" style="height: 70px; width: 20px; font-size: 15px;text-align:center;padding: 0px; background-color: gray;">{{opened?'<':'>'}}</button></p> -->
+                     <div class='hideAll'>
+                      <button class="hideAllButton btn">
+                        ^ Hide All
+                      </button>
+                    </div>
+                     <p><button (click)="toggleSideNav()" style="height: 70px; margin-left: 800px;;width: 20px; font-size: 15px;text-align:center;padding: 0px; background-color: gray;">{{opened?'<':'>'}}</button></p>
         </mat-sidenav>
         <div class="example-sidenav-content">
-          <p><button (click)="toggleSideNav()" style="height: 70px; width: 20px; font-size: 15px;text-align:center;padding: 0px; background-color: gray;">{{opened?'<':'>'}}</button></p>
+          <p><button (click)="toggleSideNav()" class="toggle" *ngIf="!opened" style="position: fixed;height: 70px; width: 20px; font-size: 15px;text-align:center;padding: 0px; background-color: gray; z-index: 9999">{{opened?'<':'>'}}</button>
+          <button (click)="toggleSideNav()" class="toggle" *ngIf="opened" style="height: 70px; margin-left: 400px;width: 20px; font-size: 15px;text-align:center;padding: 0px; background-color: gray;">{{opened?'<':'>'}}</button></p>
+
           <router-outlet></router-outlet>
         </div>
+        
 </mat-sidenav-container>
