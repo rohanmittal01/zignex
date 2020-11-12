@@ -9,11 +9,17 @@ export class LeftPanelComponent implements OnInit {
 
   events: string[] = [];
   opened: boolean = false;;
-
+  hidden = false;
   constructor() { }
 
   toggleSideNav(){
     this.opened = !this.opened;
+  }
+  toggleHidden(){
+    this.hidden = !this.hidden;
+    if(this.opened == true){
+      this.opened = false;
+    }
   }
   ngOnInit(): void {
   }

@@ -53,3 +53,30 @@
     margin-top: auto;
     margin-bottom: 5px;
   }
+
+  .hiddenForm{
+    position: fixed;
+    top: 70px;
+    cursor: pointer;
+    padding: 2px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 360px;
+    margin-left: 20px;
+  }
+  .hiddenSearchButton, .hiddenSearchInput{
+    border: none;
+    text-align: center;
+    background-color: white;
+  }
+  
+  .hiddenSearchButton{
+    width: 15%;
+  }
+  .hiddenSearchInput{
+    width: 70%;
+  }
+  input:focus, button:focus{
+    outline: none;
+  }
