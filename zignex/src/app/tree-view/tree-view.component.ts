@@ -20,10 +20,14 @@ export class DynamicDatabase {
     ['Houston', ['Route Type', 'Orange', 'Banana']],
     ['Route Type', ['FC-Mon (R:4, L:800, Y:1000)']],
     ['FC-Mon (R:4, L:800, Y:1000)', ['R101 (S:100, L:100, Y:150']],
-    ['R101 (S:100, L:100, Y:150', ['Cust1', 'Cust2', 'Cust3']]
+    ['R101 (S:100, L:100, Y:150', ['Cust1', 'Cust2', 'Cust3']],
+    ['Houstoni', ['Route Type', 'Orange', 'Banana']],
+    ['Housto', ['Route Type', 'Orange', 'Banana']],
+    ['Houst', ['Route Type', 'Orange', 'Banana']],
+
   ]);
 
-  rootLevelNodes: string[] = ['Houston', 'Conroe'];
+  rootLevelNodes: string[] = ['Houston', 'Conroe', 'Housto', 'Houstoni', 'Houst'];
 
   /** Initial data from database */
   initialData(): DynamicFlatNode[] {
@@ -124,6 +128,7 @@ export class DynamicDataSource implements DataSource<DynamicFlatNode> {
 })
 export class TreeViewComponent{
 
+  activeNode;
   // tslint:disable-next-line: variable-name
   constructor(database: DynamicDatabase) {
     this.treeControl = new FlatTreeControl<DynamicFlatNode>(this.getLevel, this.isExpandable);

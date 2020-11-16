@@ -1,0 +1,25 @@
+.toggleCustomer {
+  /* margin-bottom: 20px; */
+  /* margin-right: 200px; */
+  /* margin-top: auto; */
+  /* margin-left: auto; */
+  /* float: right; */
+  text-align: right;
+  position: absolute;
+  z-index: 9999;
+  background-color:white;
+  color: black;
+  height: 36px;
+  vertical-align: middle;
+  right: 20px;
+  border: 1px;
+  border-radius: 18px;
+}
+.main {
+  /* position: relative; */
+  /* width:200px; */
+  /* height:200px; */
+  /* overflow:hidden; */
+  /* bottom: 200px; */
+  /* z-index: 10; */
+}

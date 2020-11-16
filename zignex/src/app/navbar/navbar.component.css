@@ -10,9 +10,13 @@
     border-bottom: 2px solid white;
 }
 
+div{
+    color: black;
+}
 
 a{
     color: white;
+    cursor: pointer;
 }
 
 

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { LeftPanelComponent } from './left-panel.component';
+import { SlickgridComponent } from './slickgrid.component';
 
-describe('LeftPanelComponent', () => {
-  let component: LeftPanelComponent;
-  let fixture: ComponentFixture<LeftPanelComponent>;
+describe('SlickgridComponent', () => {
+  let component: SlickgridComponent;
+  let fixture: ComponentFixture<SlickgridComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ LeftPanelComponent ]
+      declarations: [ SlickgridComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LeftPanelComponent);
+    fixture = TestBed.createComponent(SlickgridComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

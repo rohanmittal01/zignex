@@ -1,1 +1,6 @@
-<img src="../../assets/Map.JPG" style="height: 100vh">
+<div class="main">
+  <img src="../../assets/Map.JPG" style="height: 110vh" />
+
+  <button class="toggleCustomer btn" (click)="toggleCustomer()" [@customerBtn]="customerBtn">Customers <img src="{{ customerBtnClicked ? '../../../../assets/DoubleDown.JPG' : '../../../assets/DoubleUp.JPG'}}"></button>
+  <span [@arrowBtn]="arrowBtn" style="width: 100%; background-color: white;" ><app-slickgrid></app-slickgrid></span>
+</div>

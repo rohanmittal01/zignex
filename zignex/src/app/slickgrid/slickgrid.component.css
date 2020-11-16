@@ -1,0 +1,7 @@
+/* @import "@tomtom-international/web-sdk-maps"; */
+
+.maptable {
+  height: 30vh;
+  overflow: scroll;
+  /* // display: none; */
+}
