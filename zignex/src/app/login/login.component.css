@@ -1,0 +1,104 @@
+@import url("../../../node_modules/@angular/material/prebuilt-themes/indigo-pink.css");
+img {
+  vertical-align: middle;
+}
+
+.formField {
+  width: 100%;
+}
+
+.g-recaptcha {
+  transform: scale(1.5);
+  -webkit-transform: scale(0.77);
+  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: rgba(0, 0, 0, 1);
+  
+}
+
+*:focus {
+  outline: none;
+}
+.mat-form-field-label {
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: black;
+}
+.mat-form-field-appearance-outline
+  .mat-form-field-outline
+  .mat-form-field-appearance-outline.mat-focused
+  .mat-form-field-outline-thick {
+  color: black;
+}
+
+mat-form-field.mat-form-field.mat-form-field-appearance-outline
+  > div.mat-form-field-wrapper
+  > div.mat-form-field-flex
+  > div.mat-form-field-infix {
+  padding: 0.4em 0px;
+}
+mat-form-field.mat-form-field.mat-form-field-appearance-outline
+  > div.mat-form-field-wrapper
+  > div.mat-form-field-flex
+  > div.mat-form-field-infix
+  > span.mat-form-field-label-wrapper {
+  top: -1.5em;
+}
+
+.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float
+  .mat-form-field-label {
+  transform: translateY(-1.1em) scale(0.75);
+  width: 133.33333%;
+}
+.container{	
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* mb-4, .my-4 {
+    margin-bottom: 1.5rem!important;
+} */
+
+/* .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+} */
+/* 
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+} */
+
+form {
+  display: block;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 380px;
+  padding: 15px;
+  margin: auto;
+}
+
+/* .vertically-center{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: 1px solid black;
+    width: 330px;
+} */

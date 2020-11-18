@@ -1,0 +1,31 @@
+<!-- <script>
+<link href="../../../node_modules/@angular/material/prebuilt-themes/indigo-pink.css" rel="stylesheet"></link>
+</script> -->
+
+<div style="height: 100vh; background-color: white;">
+  <div class="container vertically-center" style=" width: 500px; border-radius: 15px; -webkit-box-shadow: 0 0 10px lightgray;
+  box-shadow: 0 0 10px gray;">
+
+    <form #loginForm="ngForm" class="form-signin text-center" (submit)="login()">
+      <img class="mb-4" src="../../assets/zignex_logo.png" alt="ZIGNEX" height="90">
+      <h1 class="h3 mb-3 font-weight-normal">Log in</h1>
+      <div *ngIf="error!=''" class="alert alert-danger">{{error}}</div>
+      <mat-form-field appearance="outline" class="formField" style="font-size: 15px;">
+        <mat-label>User name</mat-label>
+        <input class="hi" matInput #username ngModel type="text" name="username" id="inputUsername" [(ngModel)]="model.username" class="form-control" placeholder="Placeholder" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="formField">
+        <mat-label>Password</mat-label>
+        <input matInput #Password ngModel type="password" name="password" id="inputPassword" [(ngModel)]="model.password" class="form-control" placeholder="Placeholder" required>
+      </mat-form-field>
+    <div class="form-signin" style="text-align: left; padding: 2px; margin-top: -20px;">
+      <button type="button" class="btn" style="color: rgb(92,126,242);">Forgot Password?</button><br>
+      <div style="text-align: center;"><ngx-recaptcha2 style="display: inline-block;" name="captcha" [(ngModel)]="captchaValue" #captchaElem data-size="compact" type="image"
+      [siteKey]="siteKey"></ngx-recaptcha2>
+    </div>
+      <br>
+      <button [disabled]="!loginForm.valid" class="btn btn-block ml-auto" type="submit" style="width: 70px; padding: 3px; border: 1px solid black;">Log in</button>
+    </div>
+  </form>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import '@angular/compiler';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
@@ -13,10 +13,13 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { AngularSlickgridModule, CollectionService } from 'angular-slickgrid';
 import { TranslateModule, TranslateService, TranslateLoader, TranslateStore } from '@ngx-translate/core';
+import { NgxCaptchaModule } from 'ngx-captcha';
 // import { TranslateStore } from '@ngx-translate/core/ngx-translate-core';
 import { AppComponent } from './app.component';
 import { LeftPanelComponent } from './left-panel/left-panel.component';
@@ -32,6 +35,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { HttpClient } from '@angular/common/http';
 // import { TranslateHttpLoader } from '@ngx-translate/http-loader/lib/http-loader';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LoginComponent } from './login/login.component';
 
 // export function initTranslateLoader(http: HttpClient) {
 //   console.log("load new files-----");
@@ -50,11 +54,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     MapViewComponent,
     SlickgridComponent,
     AddTodoComponent,
-    TodoListComponent
+    TodoListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
     HttpClientModule,
@@ -66,7 +72,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatSidenavModule,
     MatCheckboxModule,
     MatProgressSpinnerModule,
+    MatFormFieldModule,
+    MatInputModule,
     NgxSpinnerModule,
+    NgxCaptchaModule,
     AngularSlickgridModule.forRoot(),
     // TranslateModule,
     // TranslateLoader,
@@ -81,7 +90,8 @@ export function HttpLoaderFactory(http: HttpClient) {
       enabled: environment.production,
     }),
     RouterModule.forRoot([
-    { path: '', component: MapViewComponent }
+    { path: '', component: MapViewComponent },
+    {path: 'login', component: LoginComponent}
 ], { relativeLinkResolution: 'legacy' })
   ],
   providers: [
